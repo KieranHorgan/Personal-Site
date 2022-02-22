@@ -1,0 +1,88 @@
+:root {
+  --main-primary-color: #3b3b98;
+
+  scrollbar-color: var(--main-primary-color) #eee;
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-primary-color);
+}
+
+nav a, nav button, header {
+  background: var(--main-primary-color);
+}
+
+main {
+  background: #f9f9f9;
+}
+
+main > ul {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 100rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-gap: 1em;
+  padding: 1em;
+}
+@media (min-width: 700px) {
+  main > ul {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media (min-width: 1200px) {
+  main > ul {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+main > ul > li {
+  justify-self: stretch;
+  align-self: start;
+}
+
+main > ul > li > a {
+  display: block;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-decoration: none;
+  padding-top: 1em;
+  text-align: center;
+  box-sizing: border-box;
+  transition: .05s transform;
+  box-shadow: .05em .05em .4em rgba(0,0,0,.2);
+}
+
+main > ul > li > a:hover {
+  border-color: #aaa;
+  transform: translate(-2px, -4px);
+  box-shadow: .05em .05em .4em rgba(0,0,0,.15);
+}
+main > ul > li > a:active {
+  border-color: #aaa;
+  transform: translate(2px, 4px);
+  box-shadow: .05em .05em .3em rgba(0,0,0,0.3);
+}
+
+main h2, main p {
+  padding: 0 1em;
+}
+main h2 {
+  color: var(--main-primary-color);
+}
+main p {
+  color: #444;
+}
+
+main img {
+  display: block;
+  width: 100%;
+  align-self: flex-end;
+  border-radius: 4px;
+}
+
+footer {
+  background: #2e7d32;
+}
